@@ -1,4 +1,14 @@
-﻿string[] array = new string[4] { "hello", "2", "world", ":-)" };
+﻿
+
+Console.Clear();
+System.Console.WriteLine("Введите  с клавиатуры через запятую текст: ");
+string[] temp = Console.ReadLine().Split(",").ToArray();
+string[] array = new string[temp.Length];
+for (int i = 0; i < temp.Length; i++)
+{
+    array[i] = temp[i];
+}
+
 string[] resultArray = new string[array.Length];
 Func(array, resultArray);
 PrintArray(resultArray);
